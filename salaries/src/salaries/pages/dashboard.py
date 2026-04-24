@@ -1,8 +1,8 @@
 import streamlit as st
-from salaries.utils.helpers import get_salaries_df, read_textfile
-from salaries.utils.constants import MARKDOWN_PATH
+from salaries.utils.helpers import get_salaries_df, read_textfile, read_css
+from salaries.utils.constants import MARKDOWN_PATH, STYLE_PATH
 from salaries.components.kpis import avg_salary_usd_kpi
-from salaries.components.charts import top_avg_salaries_chart
+from salaries.components.charts import filtered_table, top_avg_salaries_chart
 from salaries.components.filters import job_title_filter, experience_level_filter
 
 def dashboard_layout():
@@ -35,8 +35,10 @@ def dashboard_layout():
         job_title = job_title_filter()
     with cols[1]:
         experience_level = experience_level_filter()
-    
-    st.markdown(job_title)
+
+    filtered_table(job_title, experience_level)
+
+    read_css(STYLE_PATH / "dashboard.css")
 
 if __name__ == "__main__":
     dashboard_layout()

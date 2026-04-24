@@ -6,5 +6,6 @@ IMAGE_PATH = ASSETS_PATH / "image"
 STYLE_PATH = ASSETS_PATH / "style"
 MARKDOWN_PATH = ASSETS_PATH / "markdown"
 DATA_PATH = ASSETS_PATH / "data"
+STYLE_PATH = ASSETS_PATH / "style"
 
 print(f"BASE_PATH: {BASE_PATH}")
