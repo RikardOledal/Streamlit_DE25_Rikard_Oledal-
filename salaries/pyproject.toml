@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [
     { name = "RIKARD OLEDAL", email = "rikardoledal@gmail.com" }
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 dependencies = [
     "duckdb>=1.5.2",
     "ipykernel>=7.2.0",
@@ -19,6 +19,3 @@ salaries = "salaries:main"
 [build-system]
 requires = ["uv_build>=0.8.18,<0.9.0"]
 build-backend = "uv_build"
-
-[tool.setuptools.packages.find]
-where = ["src"]
